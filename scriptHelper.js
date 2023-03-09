@@ -26,10 +26,10 @@ function validateInput(stringInput) {
 }
 
 function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
-   let pilotNameInput = document.getElementById("pilotName");
-   let copilotNameInput = document.getElementById("copilotName");
-   let fuelLevelInput = document.getElementById("fuelLevel");
-   let cargoMassInput = document.getElementById("cargoMass");
+   let pilotNameInput = document.getElementById("pilotStatus");
+   let copilotNameInput = document.getElementById("copilotStatus");
+   let fuelLevelInput = document.getElementById("fuelStatus");
+   let cargoMassInput = document.getElementById("cargoStatus");
 
 if (validateInput(pilot) === "Empty" ||
     validateInput(copilot) === "Empty" ||
@@ -43,8 +43,8 @@ if (validateInput(pilot) === "Empty" ||
             alert(`"Pilot name" and "Copilot Name" should only contain letters. "Fuel level" and "Cargo mass" should only contain numbers.`)
     } else {
         list.style.visibility = "visible";
-        pilotNameInput.innerHTML = `Pilot Ready. The pilot is ${pilot}`;
-        copilotNameInput.innerHTML = `Copilot Ready. The copilot is ${copilot}`;
+        pilotNameInput.innerHTML = `Pilot Ready. The pilot is ${pilot}.`;
+        copilotNameInput.innerHTML = `Copilot Ready. The copilot is ${copilot}.`;
     }
 
 let launchStatus = document.getElementById("launchStatus");
