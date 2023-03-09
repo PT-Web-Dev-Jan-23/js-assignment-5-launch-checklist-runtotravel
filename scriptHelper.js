@@ -17,11 +17,11 @@ function addDestinationInfo(document, name, diameter, star, distance, moons, ima
 
 function validateInput(stringInput) {
     if (stringInput === "") {
-        return "empty";
+        return "Empty";
     } else if (isNaN(stringInput)) {
-        return "Not a number"
+        return "Not a Number"
     } else {
-        return "Is a number"
+        return "Is a Number"
     }
 }
 
@@ -31,20 +31,20 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
    let fuelLevelInput = document.getElementById("fuelLevel");
    let cargoMassInput = document.getElementById("cargoMass");
 
-if (validateInput(pilot) === "empty" ||
-    validateInput(copilot) === "empty" ||
-    validateInput(fuelLevel) === "empty" ||
-    validateInput(cargoLevel) === "empty") {
+if (validateInput(pilot) === "Empty" ||
+    validateInput(copilot) === "Empty" ||
+    validateInput(fuelLevel) === "Empty" ||
+    validateInput(cargoLevel) === "Empty") {
         alert("All fields must be filled out.")
-    } else if (validateInput(pilot) === "Is a number" ||
-        validateInput(copilot) === "Is a number" ||
-        validateInput(fuelLevel) === "Not a number" ||
-        validateInput(cargoLevel) === "Not a number") {
+    } else if (validateInput(pilot) === "Is a Number" ||
+        validateInput(copilot) === "Is a Number" ||
+        validateInput(fuelLevel) === "Not a Number" ||
+        validateInput(cargoLevel) === "Not a Number") {
             alert(`"Pilot name" and "Copilot Name" should only contain letters. "Fuel level" and "Cargo mass" should only contain numbers.`)
     } else {
         list.style.visibility = "visible";
-        pilotNameInput.innerHTML = `Pilot Ready. The pilot is ${pilotName}`;
-        copilotNameInput.innerHTML = `Copilot Ready. The copilot is ${copilotName}`;
+        pilotNameInput.innerHTML = `Pilot Ready. The pilot is ${pilot}`;
+        copilotNameInput.innerHTML = `Copilot Ready. The copilot is ${copilot}`;
     }
 
 let launchStatus = document.getElementById("launchStatus");
