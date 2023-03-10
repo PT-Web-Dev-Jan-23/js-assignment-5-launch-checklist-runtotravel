@@ -2,17 +2,18 @@
 require('isomorphic-fetch');
 
 function addDestinationInfo(document, name, diameter, star, distance, moons, imageUrl) {
-    let missionInfo = document.getElementById("missionTarget");
-    missionInfo.innerHTML = 
-        `<h2>Mission Destination</h2>
-            <ol>
-                <li>Name: ${name}</li>
-                <li>Diameter: ${diameter}</li>
-                <li>Star: ${star}</li>
-                <li>Distance from Earth: ${distance}</li>
-                <li>Number of Moons: ${moons}</li>
-            </ol>
-            <img src="${imageUrl}">`;
+    let div = document.getElementById("missionTarget");
+    div.innerHTML = `
+                 <h2>Mission Destination</h2>
+                 <ol>
+                     <li>Name: ${name}</li>
+                     <li>Diameter: ${diameter}</li>
+                     <li>Star: ${star}</li>
+                     <li>Distance from Earth: ${distance}</li>
+                     <li>Number of Moons: ${moons}</li>
+                 </ol>
+                 <img src="${imageUrl}">
+                 `;
 }
 
 function validateInput(stringInput) {
